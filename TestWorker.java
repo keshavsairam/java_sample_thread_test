@@ -11,7 +11,7 @@ import com.sample.example.model.Order;
 public class TestWorker {
 	public static void main(String[] args) {
 		// Creating shared object
-		BlockingQueue<Order> sharedQueue = new LinkedBlockingQueue<Order>();
+		BlockingQueue<Order> sharedQueue = new LinkedBlockingQueue<Order>(5);
 
 		ExecutorService executor = Executors.newCachedThreadPool();
 		CountDownLatch count = new CountDownLatch(10);
